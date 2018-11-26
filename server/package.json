@@ -1,0 +1,31 @@
+{
+  "name": "chat-app-server",
+  "version": "1.0.0",
+  "description": "Chat App Server",
+  "main": "server.js",
+  "scripts": {
+    "start": "nodemon server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/chazmcgrill/chat-app.git"
+  },
+  "keywords": [
+    "chat",
+    "app",
+    "full-stack",
+    "auth",
+    "sockets"
+  ],
+  "author": "Charlie Taylor <mail@charlietaylorcoder.com> (https://charlietaylorcoder.com)",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/chazmcgrill/chat-app/issues"
+  },
+  "homepage": "https://github.com/chazmcgrill/chat-app#readme",
+  "dependencies": {
+    "express": "^4.16.4",
+    "mongoose": "^5.3.13",
+    "morgan": "^1.9.1"
+  }
+}
