@@ -24,6 +24,7 @@
   },
   "homepage": "https://github.com/chazmcgrill/chat-app#readme",
   "dependencies": {
+    "bcrypt-nodejs": "0.0.3",
     "express": "^4.16.4",
     "mongoose": "^5.3.13",
     "morgan": "^1.9.1"

@@ -23,7 +23,7 @@ exports.signup = function(req, res, next) {
         user.save(function(err) {
             if (err) return next(err);
             // confirm creation
-            res.send({ success: 'user created' });
+            res.send(user);
         })
     });
 }
