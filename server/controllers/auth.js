@@ -12,7 +12,6 @@ exports.signup = function(req, res, next) {
                 error: 'Email and password are required.'
             });
         }
-        // check for duplicate email
         if (existingUser) {
             return res.status(422).send({
                 error: 'Email already in use.'
@@ -22,12 +21,11 @@ exports.signup = function(req, res, next) {
         const user = new User({ email: email, password: password });
         user.save(function(err) {
             if (err) return next(err);
-            // confirm creation
             res.send(user);
         })
     });
 }
 
 exports.signin = function(req, res, next) {
-    res.send(req.body);
+    res.send(req.user);
 }
