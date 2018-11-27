@@ -25,8 +25,12 @@
   "homepage": "https://github.com/chazmcgrill/chat-app#readme",
   "dependencies": {
     "bcrypt-nodejs": "0.0.3",
+    "dotenv": "^6.1.0",
     "express": "^4.16.4",
     "mongoose": "^5.3.13",
-    "morgan": "^1.9.1"
+    "morgan": "^1.9.1",
+    "passport": "^0.4.0",
+    "passport-jwt": "^4.0.0",
+    "passport-local": "^1.0.0"
   }
 }

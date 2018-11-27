@@ -3,6 +3,7 @@ const morgan = require('morgan');
 const app = express();
 const router = require('./router');
 const mongoose = require('mongoose');
+require('dotenv').config();
 
 // db connection
 const mongoSettings = { useNewUrlParser: true, useCreateIndex: true }
