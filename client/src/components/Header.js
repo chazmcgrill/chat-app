@@ -1,15 +1,26 @@
-import React from 'react';
+import React, { Fragment } from 'react';
 import { Link } from 'react-router-dom';
-// import { connect } from 'react-redux';
+import { connect } from 'react-redux';
 
-const Header = () => (
+const Header = (props) => (
     <header>
         <Link to="/">Home</Link>
-        <Link to="/signup">Sign Up</Link>
-        <Link to="/signin">Sign In</Link>
-        <Link to="/chat">Chat</Link>
-        <Link to="/signout">Signout</Link>
+        {props.authenticated ? (
+            <Fragment>
+                <Link to="/chat">Chat</Link>
+                <Link to="/signout">Signout</Link>
+            </Fragment>
+        ) : (
+            <Fragment>
+                <Link to="/signup">Sign Up</Link>
+                <Link to="/signin">Sign In</Link>
+            </Fragment>
+        )}
     </header>
 );
 
-export default Header;
+function mapStateToProps(state) {
+    return { authenticated: state.auth.authenticated };
+}
+
+export default connect(mapStateToProps)(Header);
