@@ -3,6 +3,7 @@ const morgan = require('morgan');
 const app = express();
 const router = require('./router');
 const mongoose = require('mongoose');
+const cors = require('cors');
 require('dotenv').config();
 
 // db connection
@@ -12,6 +13,7 @@ mongoose.connect('mongodb://localhost:chaz/chat-app', mongoSettings);
 // app setup
 app.use(morgan('combined'))
 app.use(express.json({ type: '*/*' }));
+app.use(cors());
 router(app);
 
 // server setup
