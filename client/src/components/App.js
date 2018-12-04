@@ -1,5 +1,8 @@
 import React from 'react';
 
-export default () => (
-    <div>App</div>
+export default (props) => (
+    <div>
+        <h1>Header</h1>
+        {props.children}
+    </div>
 )
