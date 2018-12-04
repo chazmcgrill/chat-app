@@ -9,12 +9,13 @@ const userSchema = new Schema({
 });
 
 // before saving model encrypt password
-userSchema.pre('save', (next) => {
-    bcrypt.genSalt(10, (err, salt) => {
+userSchema.pre('save', function(next) {
+    const user = this;
+    bcrypt.genSalt(10, function(err, salt) {
         if (err) return next(err);
-        bcrypt.hash(this.password, salt, null, (err, hash) => {
+        bcrypt.hash(user.password, salt, null, function(err, hash) {
             if (err) return next(err);
-            this.password = hash;
+            user.password = hash;
             next();
         })
     })
