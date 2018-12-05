@@ -1,6 +1,7 @@
 import React, { Fragment } from 'react';
 import { Link } from 'react-router-dom';
 import { connect } from 'react-redux';
+import './Header.css';
 
 const Header = (props) => (
     <header>
@@ -11,10 +12,10 @@ const Header = (props) => (
                 <Link to="/signout">Signout</Link>
             </Fragment>
         ) : (
-            <Fragment>
+            <div>
                 <Link to="/signup">Sign Up</Link>
-                <Link to="/signin">Sign In</Link>
-            </Fragment>
+                <Link to="/signin" style={{ marginLeft: '10px' }}>Sign In</Link>
+            </div>
         )}
     </header>
 );

@@ -1,0 +1,9 @@
+body {
+    font-display: monospace;
+    margin: 0;
+}
+
+a {
+    text-decoration: none;
+    color: #333;
+}

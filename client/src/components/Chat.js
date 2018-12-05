@@ -1,5 +1,8 @@
 import React from 'react';
+import requireAuth from './requireAuth';
 
-export default () => (
+const Chat = () => (
     <div>Chat</div>
 )
+
+export default requireAuth(Chat);
