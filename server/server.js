@@ -11,7 +11,7 @@ const mongoSettings = { useNewUrlParser: true, useCreateIndex: true }
 mongoose.connect('mongodb://localhost:chaz/chat-app', mongoSettings);
 
 // app setup
-app.use(morgan('combined'))
+app.use(morgan('tiny'))
 app.use(express.json({ type: '*/*' }));
 app.use(cors());
 router(app);
